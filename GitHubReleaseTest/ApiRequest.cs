@@ -9,7 +9,10 @@ namespace GitHubReleaseTest
 
         public static string GetJson(Uri uri)
         {
+            WebClient.Headers.Add("user-agent", "Jenny's Awesome Release Automator App");
+
             return WebClient.DownloadString(uri);
+
               
         }
     }
