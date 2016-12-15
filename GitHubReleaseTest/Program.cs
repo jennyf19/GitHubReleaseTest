@@ -22,9 +22,11 @@ namespace GitHubReleaseTest
 
                 var json = ApiRequest.GetJson(gitHubUri);
 
-                var jsonObject = JsonConvert.DeserializeObject<RootObject>(json);
+                GitHubRepoLatestRelease jsonObject = JsonConvert.DeserializeObject<GitHubRepoLatestRelease>(json);
+                Author jsonObject2 = JsonConvert.DeserializeObject<Author>(json);
 
-                Console.WriteLine(jsonObject.Value[0].tag_name);
+                Console.WriteLine("The name of the release is: " + jsonObject.name + "\nThe version number is: " + jsonObject.tag_name);
+               // + "\nThe markdown is: " + jsonObject.body
             }
 
             catch (Exception ex)
@@ -34,15 +36,8 @@ namespace GitHubReleaseTest
             }
             Console.ReadLine();
         }
-
-        public class RootObject
-        {
-           // public string Metadata { get; set; }
-            public List<Author> AuthorValue { get; set; }
-
-            public List<GitHubRepoLatestRelease> Value { get; set; }
-        }
     }
+   
     public class Author
     {
         public string login { get; set; }
