@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Catnado.GitHubReleaseTest</id>
+    <version>1.0.1</version>
+    <authors>jeferrie</authors>
+    <owners>jeferrie</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Test for releasing to NuGet for cats and their guardians</description>
+    <releaseNotes>This automates the release process as a test</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Cats</tags>
+    <dependencies>
+      <dependency id="Catnado.GitHubReleaseTest" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

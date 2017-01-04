@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Octokit;
 using Newtonsoft.Json;
+using NuGet;
 
 namespace GitHubReleaseTest
 {
     class Program
     {
-
         const string GitHubPath = "https://api.github.com/repos/jennyf19/BinaryTree/releases/latest";
 
         static void Main(string[] args)
@@ -26,7 +26,7 @@ namespace GitHubReleaseTest
                 Author jsonObject2 = JsonConvert.DeserializeObject<Author>(json);
 
                 Console.WriteLine("The name of the release is: " + jsonObject.name + "\nThe version number is: " + jsonObject.tag_name);
-               // + "\nThe markdown is: " + jsonObject.body
+                // + "\nThe markdown is: " + jsonObject.body
             }
 
             catch (Exception ex)
@@ -34,10 +34,12 @@ namespace GitHubReleaseTest
                 Console.WriteLine(ex);
 
             }
+
+
             Console.ReadLine();
         }
     }
-   
+    
     public class Author
     {
         public string login { get; set; }
